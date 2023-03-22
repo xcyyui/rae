@@ -1,4 +1,4 @@
-//anti alt bot made by ant and legend >:D
+//anti alt bot made by yyui >:D
 const Client = require('./Structures/AntiAltClient.js');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
@@ -10,7 +10,7 @@ const db = require('quick.db');
 client.loadCommands();
 
 console.log('-------------------------------------');
-console.log('[CREDITS]: made by ant#0768 & legendjs#0001');
+console.log('[CREDITS]: made by yyui');
 console.log('-------------------------------------');
 
 client.on('ready', () => {
@@ -21,8 +21,7 @@ client.on('ready', () => {
 		} channels & ${client.users.cache.size} users`
 	);
 	console.log('-------------------------------------');
-	client.user.setActivity('AntiAlt bot by ant and legendjs :D', {
-		type: 'WATCHING'
+	client.user.setActivity('AntiAlt bot by yyui', {
 	});
 });
 
@@ -69,13 +68,5 @@ client.on('guildMemberAdd', async member => {
       .addField(`Punishment`, punishment)
 			.setColor('#FF0000')
 			.setFooter(
-				guild.name + ' | Made by ant#0768 & legendjs#0001',
-				guild.iconURL({ dynamic: true })
-			);
-		if (channel) channel.send({ embed: embed });
-	}
-});
+				guild.name + ' | Made by yyui,
 
-client.login(token).catch(err => {
-	console.log('[ERROR]: Invalid Token Provided');
-});
